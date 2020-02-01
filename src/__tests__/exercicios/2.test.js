@@ -32,4 +32,19 @@ describe("Lista", () => {
 
     expect(input).toHaveValue("");
   });
+
+  it("nao adicionar quando input vazio", () => {
+    const { container, getByRole, getByTestId, getAllByRole } = render(
+      <List items={listaItens} />
+    );
+    const input = getByRole("textbox");
+    const button = getByTestId("add-item");
+    const value = "";
+
+    fireEvent.change(input, { target: { value } });
+    fireEvent.click(button);
+
+    expect(container).not.toContainHTML(`<li>${value}</li>`);
+    expect(getAllByRole("listitem").length).toBe(listaItens.length);
+  });
 });
