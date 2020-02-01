@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 
 import List from "../../components/List";
-import { listaItens } from "../../mocks/listaItens";
+import { listaItens } from "../../mocks/listItems";
 
 describe("Lista com items", () => {
   it("renderiza uma <ul />", () => {
