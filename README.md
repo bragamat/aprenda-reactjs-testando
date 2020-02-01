@@ -1,16 +1,30 @@
 Projeto criado com [Create React App](https://github.com/facebook/create-react-app).
-## Setup
+
+### Introdução
+
+Este repositório tem como objetivo ensinar os fundamentos da biblioteca [reactjs](https://pt-br.reactjs.org/) com testes.
+
+### Como obter um melhor aproveitamento desse repositório
+
+Na branch `master`, os exercicios ficam dentro da pasta `src/__testes__/exercicios` 
+definidos por ordem numéria. As respostas estarão em uma branch com o nome 
+_solucao/${numeroDoExercicio}_. Por exemplo: para o exercicio de numero **1** (um)
+a respota estará na branch `solucao/1`.
+
+### Tecnologias utilizadas nesse projeto até o momento
+- **[Reactjs](https://pt-br.reactjs.org/)**
+- **[Jest](https://jestjs.io/)**
+- **[Testing-library](https://testing-library.com/)**
+  - [react testing](https://testing-library.com/docs/react-testing-library/intro)
+
+
+### Setup
 
 `$ npm i` ou `$ yarn`
 
 ### Para rodar os testes
 
 `$ npm run test` ou `$ yarn test`
-
-### Como obter um melhor aproveitamento desse repositório
-
-na branch `master` temos os exercicios dentro da pasta `src/__testes__/exercicios` definidos por ordem numéria. As respostas estarão em uma branch com o nome solucao/${numeroDoExercicio}. Por exemplo: 
-para o primeiro exercicio a respota estará na branch `solucao/1` 
 
 ### Contribua com o Repo :D
 
