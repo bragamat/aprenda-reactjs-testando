@@ -1,28 +1,28 @@
-Projeto criado com [Create React App](https://github.com/facebook/create-react-app).
+Projeto criado com [Create React App](https://github.com/facebook/create-react-app). :sunglasses:
 
-### Introdução
+### Introdução :smiley:
 
-Este repositório tem como objetivo ensinar os fundamentos da biblioteca [reactjs](https://pt-br.reactjs.org/) com testes.
+Este repositório tem como objetivo ensinar os fundamentos da biblioteca [reactjs](https://pt-br.reactjs.org/) utilizando técnias de TDD. :sunglasses:
 
-### Como obter um melhor aproveitamento desse repositório
+### :boom: Como obter um melhor aproveitamento desse repositório
 
 Tente fazer passar todos os testes que estão quebrando. Na branch `master`, os exercicios ficam dentro da pasta `src/__testes__/exercicios` definidos por ordem numéria. As respostas estarão em uma branch com o nome _solucao/${numeroDoExercicio}_. Por exemplo: para o exercicio de numero **1** (um) a respota estará na branch `solucao/1`.
 
-### Tecnologias utilizadas nesse projeto até o momento
+### :exclamation: Tecnologias utilizadas nesse projeto até o momento
 - **[Reactjs](https://pt-br.reactjs.org/)**
 - **[Jest](https://jestjs.io/)**
 - **[Testing-library](https://testing-library.com/)**
   - [react testing](https://testing-library.com/docs/react-testing-library/intro)
 
 
-### Setup
+### :question: Setup
 
 `$ npm i` ou `$ yarn`
 
-### Para rodar os testes
+### :dizzy: Para rodar os testes
 
 `$ npm run test` ou `$ yarn test`
 
-### Contribua com o Repo :D
+###  :raised_hands: Contribua com o Projeto :D
 
 Faça um fork do projeto, crie um exercicío e submeta os _pull request_. Uma branch com o exercício e outra com a solução.
