@@ -5,6 +5,7 @@ function List({ items }) {
   const [item, setItem] = useState("");
 
   const addItem = () => {
+    if (!item) return;
     setListItem([...listItems, { key: Math.random(4), name: item }]);
     setItem("");
   };
