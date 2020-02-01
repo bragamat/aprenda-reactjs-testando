@@ -6,10 +6,7 @@ Este repositório tem como objetivo ensinar os fundamentos da biblioteca [reactj
 
 ### Como obter um melhor aproveitamento desse repositório
 
-Na branch `master`, os exercicios ficam dentro da pasta `src/__testes__/exercicios` 
-definidos por ordem numéria. As respostas estarão em uma branch com o nome 
-_solucao/${numeroDoExercicio}_. Por exemplo: para o exercicio de numero **1** (um)
-a respota estará na branch `solucao/1`.
+Tente fazer passar todos os testes que estão quebrando. Na branch `master`, os exercicios ficam dentro da pasta `src/__testes__/exercicios` definidos por ordem numéria. As respostas estarão em uma branch com o nome _solucao/${numeroDoExercicio}_. Por exemplo: para o exercicio de numero **1** (um) a respota estará na branch `solucao/1`.
 
 ### Tecnologias utilizadas nesse projeto até o momento
 - **[Reactjs](https://pt-br.reactjs.org/)**
