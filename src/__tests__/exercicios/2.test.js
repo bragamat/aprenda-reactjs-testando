@@ -32,8 +32,4 @@ describe("Lista", () => {
 
     expect(input).toHaveValue("");
   });
-
-  it("remove um item da lista", () => {
-    console.log("Escrever o teste");
-  });
 });
