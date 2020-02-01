@@ -1,28 +1,54 @@
-Projeto criado com [Create React App](https://github.com/facebook/create-react-app).
+### Solução
+A Solução proposta foi a seguinte:
 
-### Introdução
+ - Criar uma pasta de componentes e criar um pasta de component chamada List de onde vamos importar o component. 
+ 
+A estrutura de pastas ficou assim:
+```
+src
+├── App.js
+├── __tests__
+│   ├── App.test.js
+│   └── exercicios
+│       ├── 1.test.js
+│       ├── 2.test.js
+│       ├── 3.test.js
+│       └── 4.test.js
+├── components
+│   └── List
+│       └── index.js
+├── index.js
+└── setupTests.js
+```
+E o Codigo no component List/index.js:
 
-Este repositório tem como objetivo ensinar os fundamentos da biblioteca [reactjs](https://pt-br.reactjs.org/) com testes.
+```
+import React, { useState } from "react";
 
-### Como obter um melhor aproveitamento desse repositório
+function List({ items }) {
+  const [listItems, setListItem] = useState(items);
+  const [item, setItem] = useState("");
 
-Tente fazer passar todos os testes que estão quebrando. Na branch `master`, os exercicios ficam dentro da pasta `src/__testes__/exercicios` definidos por ordem numéria. As respostas estarão em uma branch com o nome _solucao/${numeroDoExercicio}_. Por exemplo: para o exercicio de numero **1** (um) a respota estará na branch `solucao/1`.
+  const addItem = () => {
+    if (!item) return;
+    setListItem([...listItems, { key: Math.random(4), name: item }]);
+    setItem("");
+  };
 
-### Tecnologias utilizadas nesse projeto até o momento
-- **[Reactjs](https://pt-br.reactjs.org/)**
-- **[Jest](https://jestjs.io/)**
-- **[Testing-library](https://testing-library.com/)**
-  - [react testing](https://testing-library.com/docs/react-testing-library/intro)
+  return (
+    <>
+      <ul>
+        {listItems &&
+          listItems.map(item => <li key={item.key}>{item.name}</li>)}
+      </ul>
+      <input type="text" value={item} onChange={e => setItem(e.target.value)} />
+      <button data-testid="add-item" onClick={addItem}>
+        Adicionar item
+      </button>
+    </>
+  );
+}
 
+export default List;
 
-### Setup
-
-`$ npm i` ou `$ yarn`
-
-### Para rodar os testes
-
-`$ npm run test` ou `$ yarn test`
-
-### Contribua com o Repo :D
-
-Faça um fork do projeto, crie um exercicío e submeta os _pull request_. Uma branch com o exercício e outra com a solução.
+```
