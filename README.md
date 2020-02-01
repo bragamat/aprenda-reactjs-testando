@@ -1,17 +1,35 @@
-Projeto criado com [Create React App](https://github.com/facebook/create-react-app).
-## Setup
+### Solução
+A Solução proposta foi a seguinte:
 
-`$ npm i` ou `$ yarn`
+ - Criar uma pasta de componentes e criar um pasta de component chamada List de onde vamos importar o component. 
+ 
+A estrutura de pastas ficou assim:
+```
+src
+├── App.js
+├── __tests__
+│   ├── App.test.js
+│   └── exercicios
+│       ├── 1.test.js
+│       ├── 2.test.js
+│       ├── 3.test.js
+│       └── 4.test.js
+├── components
+│   └── List
+│       └── index.js
+├── index.js
+└── setupTests.js
+```
+E o Codigo no component List/index.js:
 
-### Para rodar os testes
+```
+import React from "react";
 
-`$ npm run test` ou `$ yarn test`
+function List({ items }) {
+  return (
+    <ul>{items && items.map(item => <li key={item.key}>{item.name}</li>)}</ul>
+  );
+}
 
-### Como obter um melhor aproveitamento desse repositório
-
-na branch `master` temos os exercicios dentro da pasta `src/__testes__/exercicios` definidos por ordem numéria. As respostas estarão em uma branch com o nome solucao/${numeroDoExercicio}. Por exemplo: 
-para o primeiro exercicio a respota estará na branch `solucao/1` 
-
-### Contribua com o Repo :D
-
-Faça um fork do projeto, crie um exercicío e submeta os _pull request_. Uma branch com o exercício e outra com a solução.
+export default List;
+```
