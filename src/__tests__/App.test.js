@@ -4,6 +4,6 @@ import App from "../App";
 
 describe("<App />", () => {
   test("renders without errors", () => {
-    render(<App />);
+    expect(render(<App />)).toBeTruthy();
   });
 });
