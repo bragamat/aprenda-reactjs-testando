@@ -1,28 +1,16 @@
-Projeto criado com [Create React App](https://github.com/facebook/create-react-app). :sunglasses:
+# Vamos do início! :sunglasses:
 
-### Introdução :smiley:
+## Por que testar ?
 
-Este repositório tem como objetivo ensinar os fundamentos da biblioteca [reactjs](https://pt-br.reactjs.org/) utilizando técnias de TDD. :sunglasses:
-
-### :boom: Como obter um melhor aproveitamento desse repositório
-
-Tente fazer passar todos os testes que estão quebrando. Na branch `master`, os exercicios ficam dentro da pasta `src/__testes__/exercicios` definidos por ordem numéria. As respostas estarão em uma branch com o nome _solucao/${numeroDoExercicio}_. Por exemplo: para o exercicio de numero **1** (um) a respota estará na branch `solucao/1`.
-
-### :exclamation: Tecnologias utilizadas nesse projeto até o momento
-- **[Reactjs](https://pt-br.reactjs.org/)**
-- **[Jest](https://jestjs.io/)**
-- **[Testing-library](https://testing-library.com/)**
-  - [react testing](https://testing-library.com/docs/react-testing-library/intro)
+## Como Testar ? 
+A ideia principal de um teste é sempre ver se o valor entregado por um recurso, função, componente, fluxo (ou qualquer _feature_) está entregando é o mesmo pensado e implementado!
 
 
-### :question: Setup
+- Iremos utilizar um _framework_ de testes: [_**JEST**_](https://jestjs.io/) que possuei várias ferramentas que nos ajudarão a escrever nossos testes de forma rápida, simples, e prática! :rocket:
+  Também, utilizaremos uma biblioteca recomendada pela própria documentação do [**Reactjs**](https://pt-br.reactjs.org/): [_React-Testing-Library_](https://testing-library.com/docs/react-testing-library/intro) - Que é uma lib que facilita simular ações do usuário. :smiley:
 
-`$ npm i` ou `$ yarn`
 
-### :dizzy: Para rodar os testes
+## O que testar ?
 
-`$ npm run test` ou `$ yarn test`
 
-###  :raised_hands: Contribua com o Projeto :D
 
-Faça um fork do projeto, crie um exercicío e submeta os _pull request_. Uma branch com o exercício e outra com a solução.
