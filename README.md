@@ -16,7 +16,8 @@ Pra ficar mais fácil, você pode escolher se guiar pelas temas abaixo, só clic
  - É uma **biblioteca** baseada em componentes que conseguem gerenciar o próprio estado individualmente. Sendo extremamente prática a reutilização desses componentes em vários lugares da nossa aplicação.
  <br/>
  - O react utiliza uma ferramenta chamada [Virtual Dom (VDOM)](https://pt-br.reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom) que, em resumo, faz a diferenciação do estado da aplicação no DOM do browser com o estado da aplicação em si, renderizando somente o que é necessário! Pra isso, uma outra biblioteca é utilizada: O [ReactDOM](https://pt-br.reactjs.org/docs/react-dom.html#overview) é resposável por renderizar o container da aplicação em um template também (entre vaárias outras coisas). Esta imagem ilustra muito bem como ocorre essa diff: 
- ![](https://miro.medium.com/max/1624/1*638z1MCoYN1MyCFQV9a2SA.gif)
+ ![VirtualDom Diff](https://miro.medium.com/max/1624/1*638z1MCoYN1MyCFQV9a2SA.gif)
+
  Está sendo re-renderizado somente a diferença.
 
 
@@ -55,7 +56,6 @@ Então vamos criar um arquivo "index.html" simples pra gente começar a entender
 ```
 
 Esse _index.html_, aberto em um navegador, nos retorna o seguinte resultado:
-<br />
 
 ![](./assets/testando-status-index.gif)
 
