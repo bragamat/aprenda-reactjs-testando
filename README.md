@@ -1,5 +1,30 @@
 # Vamos do início! :sunglasses:
 
+Pra ficar mais fácil, você pode escolher se guiar pelas temas abaixo, só clicar em alguma das palavras-chaves e você vai direto pro tópico desejado.
+
+* [O que é Reactjs](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#o-que-é-reactjs-)
+* [Como Começar Com Reactjs ?](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#como-começar-com-reactjs-)
+* [Por que testar ?](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#por-que-testar-)
+* [O que testar ?](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#-que-testar-)
+* [Como Testar ?](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#-como-testar-)
+
+# O que é Reactjs ?
+
+## Introdução
+ - _"O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web desenvolvida e mantida pelo facebook"_. Essa é a definição pelo [wikipédia](https://pt.wikipedia.org/wiki/React_(JavaScript)). É um biblioteca dentro do ambiente _react_ que nos ajuda no desenvolvimento de interfaces amigáveis e performáticas, renderizando somente o que precisa ser renderizado! :smiley: 
+ <br/>
+ - É uma **biblioteca** baseada em componentes que conseguem gerenciar o próprio estado individualmente. Sendo extremamente prática a reutilização desses componentes em vários lugares da nossa aplicação.
+ <br/>
+ - O react utiliza uma ferramenta chamada [Virtual Dom (VDOM)](https://pt-br.reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom) que, em resumo, faz a diferenciação do estado da aplicação no DOM do browser com o estado da aplicação em si, renderizando somente o que é necessário! Pra isso, uma outra biblioteca é utilizada: O [ReactDOM](https://pt-br.reactjs.org/docs/react-dom.html#overview) é resposável por renderizar o container da aplicação em um template também (entre vaárias outras coisas). Esta imagem ilustra muito bem como ocorre essa diff: 
+ ![](https://miro.medium.com/max/1624/1*638z1MCoYN1MyCFQV9a2SA.gif)
+ Está sendo re-renderizado somente a diferença.
+
+
+## Como Começar Com Reactjs
+- Por ser uma lib simples de javascript, a gente pode simplesmente importar um direto de um servidor "publico" em um html simples.<br />
+Então vamos criar um arquivo "index.html" simples pra gente começar a entender o fluxo de trabalho (esse arquivo vai estar nesse repositório, só procurar por _index.html_):
+
+==============================================================
 ## Por que testar ?
 Vou resumir com alguns comentários que peguei na comunidade :+1:
 
