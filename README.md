@@ -3,10 +3,10 @@
 Pra ficar mais fácil, você pode escolher se guiar pelas temas abaixo, só clicar em alguma das palavras-chaves e você vai direto pro tópico desejado.
 
 * [O que é Reactjs](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#o-que-é-reactjs-)
-* [Como Começar Com Reactjs ?](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#como-começar-com-reactjs-)
+* [Como Começar Com Reactjs ?](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#como-come%C3%A7ar-com-reactjs)
 * [Por que testar ?](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#por-que-testar-)
-* [O que testar ?](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#-que-testar-)
-* [Como Testar ?](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#-como-testar-)
+* [O que testar ?](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#o-que-testar-)
+* [Como Testar ?](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#como-testar-)
 
 # O que é Reactjs ?
 
@@ -24,7 +24,46 @@ Pra ficar mais fácil, você pode escolher se guiar pelas temas abaixo, só clic
 - Por ser uma lib simples de javascript, a gente pode simplesmente importar um direto de um servidor "publico" em um html simples.<br />
 Então vamos criar um arquivo "index.html" simples pra gente começar a entender o fluxo de trabalho (esse arquivo vai estar nesse repositório, só procurar por _index.html_):
 
-==============================================================
+```
+<!DOCTYPE html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <div react-root="app"></div>
+  <!-- Dependências do REACT -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  
+  <!-- Dependências para podermos utilizar recursos do javascript ES6 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js" integrity="sha256-rHXAjVk56UKw0oJTIGJx/r0VWSBkkDdVtXy7NsdAC0c=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script><script type="text/babel">
+    
+    const App =  () => {
+      const [mostraMensagem, setMostraMensagem] = React.useState(false)
+      return(
+        <div>
+          { mostraMensagem &&  <p>mensagem: Muito show trabalhar com react!</p> }
+          <button onClick={() => setMostraMensagem(sts => !sts)}>Muda o status para mostrar a mensagem</button>
+        </div>
+      )
+    }
+    ReactDOM.render(<App />, document.querySelector('[react-root="app"]'));
+  </script>
+</body>
+</html>
+```
+
+Esse _index.html_, aberto em um navegador, nos retorna o seguinte resultado:
+<br />
+
+![](./assets/testando-status-index.gif)
+
+Apesar da rapidez de se ter uma aplicação assim, não é um padrão viável por não ser escalável nem mesmo de fácil manutenção.
+
+
+
+======================== THIS IS A WORKING IN PROGRESS ======================================
 ## Por que testar ?
 Vou resumir com alguns comentários que peguei na comunidade :+1:
 
