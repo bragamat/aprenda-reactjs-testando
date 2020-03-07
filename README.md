@@ -62,7 +62,7 @@ Apesar da rapidez de se ter uma aplicação assim, não é um padrão viável po
 
 
 
-======================== THIS IS A WORKING IN PROGRESS ========================
+======================== **THIS IS A WORKING IN PROGRESS** ========================
 ## Por que testar ?
 Vou resumir com alguns comentários que peguei na comunidade :+1:
 
