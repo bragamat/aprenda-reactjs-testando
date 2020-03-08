@@ -1,5 +1,8 @@
 # Vamos do início! :sunglasses:
-========================== **THIS IS A WORKING IN PROGRESS** ==========================
+======================  **Este é um conteúdo que está em constante atualização** ====================== 
+
+========================== **Este é um conteúdo que NÃO está finalizado** ==========================
+
 Pra ficar mais fácil, você pode escolher se guiar pelas temas abaixo, só clicar em alguma das palavras-chaves e você vai direto pro tópico desejado.
 
 * [O que é Reactjs](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#o-que-é-reactjs-)
@@ -78,12 +81,42 @@ ReactDOM.render(
 DICA: Apesar da rapidez de se ter uma aplicação assim, não é um padrão viável por não ser escalável nem mesmo de fácil manutenção.
 
 ##### jsx
-* O HTML que escrevemos no dentro do nosso componente não é exatamente HTML. É uma sintaxe mais simples que nos permite escrever o código dentro do nosso componente.
-
 * JSX é uma sintaxe semelhante ao XML
-* Serve para escrevermos nossos components
+* O HTML que escrevemos dentro do nosso componente não é exatamente HTML. É uma sintaxe mais simples que nos permite escrever o código dentro do nosso componente que se parece **_muito_** com html. Abaixo podemos ver a diferença de se escrever um component react com jsx e sem utilizar jsx:
+```
+  /*
+   *  Componente utilizando jsx
+   */
+  const App = () => {
+    return(
+        <div>
+          <button onClick={() => setMostraMensagem(sts => !sts)}>Muda o status para mostrar a mensagem</button>
+          { mostraMensagem &&  <p>mensagem: Muito show trabalhar com react!</p> }
+        </div>
+    )
+  }
 
-========================== **THIS IS A WORKING IN PROGRESS** ==========================
+  /*
+   *  Componente SEM utilizar jsx
+   */
+  const App = React.createElement("div", null, 
+    React.createElement("button", 
+      { 
+        onClick: function onClick() { return setMostraMensagem(function(sts) { return !sts }); }
+      }, 
+  "Muda o status para mostrar a mensagem"), 
+  mostraMensagem && 
+    React.createElement("p", null, "mensagem: Muito show trabalhar com  react!")
+    );
+```
+* Imagina ter que escrever nessa syntaxe :sweat_smile: ? Ainda bem que temos o [babel](https://babeljs.io/) pra ~~_compilar_~~ transformar a primeira versão na segunda versão (porque o navegador não entende jsx).
+
+====================== **Este é um conteúdo que está em constante atualização** ======================
+
+========================== **Este é um conteúdo que NÃO está finalizado** ==========================
+
+
+
 ## Por que testar ?
 Vou resumir com alguns comentários que peguei na comunidade :+1:
 
