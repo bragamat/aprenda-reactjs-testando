@@ -1,5 +1,5 @@
 # Vamos do início! :sunglasses:
-
+======================== **THIS IS A WORKING IN PROGRESS** ========================
 Pra ficar mais fácil, você pode escolher se guiar pelas temas abaixo, só clicar em alguma das palavras-chaves e você vai direto pro tópico desejado.
 
 * [O que é Reactjs](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#o-que-é-reactjs-)
@@ -57,6 +57,7 @@ Então vamos criar um arquivo "index.html" simples pra gente começar a entender
 Esse _index.html_, aberto em um navegador, nos retorna o seguinte resultado:
 
 ![](./assets/testando-status-index.gif)
+* Nossa componente reactjs é um componente de função de nome _App_, que "retorna um html" (jsx), onde está sendo feito o controle do estado (mais pra frente, falaremos sobre o método `useState` e muitos outros do react). Dentro da div, a syntax `&&` significa: _"faz o próximo se o anterior for verdadeiro"_. Na tag `<button>` temos um atributo `onClick` que dispara uma ação, no nosso caso o método `setMostraMensagem` que por sua vez alterar o estado anterior da variável `mostraMensagem` QUE se for verdadeiro mostra a mensagem. 
 
 Apesar da rapidez de se ter uma aplicação assim, não é um padrão viável por não ser escalável nem mesmo de fácil manutenção.
 
