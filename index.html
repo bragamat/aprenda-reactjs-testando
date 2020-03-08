@@ -13,8 +13,8 @@
       const [mostraMensagem, setMostraMensagem] = React.useState(false)
       return(
         <div>
-          { mostraMensagem &&  <p>mensagem: Muito show trabalhar com react!</p> }
           <button onClick={() => setMostraMensagem(sts => !sts)}>Muda o status para mostrar a mensagem</button>
+          { mostraMensagem &&  <p>mensagem: Muito show trabalhar com react!</p> }
         </div>
       )
     }

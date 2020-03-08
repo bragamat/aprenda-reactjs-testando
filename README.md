@@ -1,5 +1,5 @@
 # Vamos do início! :sunglasses:
-======================== **THIS IS A WORKING IN PROGRESS** ========================
+========================== **THIS IS A WORKING IN PROGRESS** ==========================
 Pra ficar mais fácil, você pode escolher se guiar pelas temas abaixo, só clicar em alguma das palavras-chaves e você vai direto pro tópico desejado.
 
 * [O que é Reactjs](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#o-que-é-reactjs-)
@@ -43,8 +43,8 @@ Então vamos criar um arquivo "index.html" simples pra gente começar a entender
       const [mostraMensagem, setMostraMensagem] = React.useState(false)
       return(
         <div>
-          { mostraMensagem &&  <p>mensagem: Muito show trabalhar com react!</p> }
           <button onClick={() => setMostraMensagem(sts => !sts)}>Muda o status para mostrar a mensagem</button>
+          { mostraMensagem &&  <p>mensagem: Muito show trabalhar com react!</p> }
         </div>
       )
     }
@@ -57,13 +57,33 @@ Então vamos criar um arquivo "index.html" simples pra gente começar a entender
 Esse _index.html_, aberto em um navegador, nos retorna o seguinte resultado:
 
 ![](./assets/testando-status-index.gif)
-* Nossa componente reactjs é um componente de função de nome _App_, que "retorna um html" (jsx), onde está sendo feito o controle do estado (mais pra frente, falaremos sobre o método `useState` e muitos outros do react). Dentro da div, a syntax `&&` significa: _"faz o próximo se o anterior for verdadeiro"_. Na tag `<button>` temos um atributo `onClick` que dispara uma ação, no nosso caso o método `setMostraMensagem` que por sua vez alterar o estado anterior da variável `mostraMensagem` QUE se for verdadeiro mostra a mensagem. 
+* Nossa componente reactjs é um **componente de função** de nome _**App**_, que "retorna um html" ~~(jsx - A gente vai falar um pouco mais disso [aqui](https://github.com/bragamat/aprenda-reactjs-testando/tree/solucao/0#jsx))~~;
+* `useState` controla o estado (mais pra frente, falaremos sobre o método `useState` e muitos outros do react);
+* Dentro da div, a syntax `&&` significa: _"faz o próximo se o anterior for verdadeiro"_;
+* Na tag `<button>` temos um atributo `onClick` que dispara uma ação, no nosso caso o método `setMostraMensagem`;
+* Quando `mostraMensagem` é verdadeiro, a mensagem é mostrada.
 
-Apesar da rapidez de se ter uma aplicação assim, não é um padrão viável por não ser escalável nem mesmo de fácil manutenção.
+##### Como funciona o método `render`  ?
+```
+ReactDOM.render(
+  ReactElement element,
+  DOMElement container
+)
+```
 
+* _"Renderiza o um elemento do React no DOM no container fornecido e retorna uma referência ao componente (ou retorna null para componentes sem state). Se o elemento do React foi previamente renderizado no container, isso vai realizar uma atualização nele e só alterar o DOM conforme necessário para refletir o elemento do React mais recente."_ -  [Reactjs Docs](https://pt-br.reactjs.org/docs/react-dom.html#render)
+* No caso do nosso `index.html`, o ReactElement é o nosso component `App` e o nosso _container_ é o elemento que retorna da busca no documento:
+ `document.querySelector('[react-root="app"]')` que retorna a `div` do nosso html: `<div react-root="app"></div>`.
 
+DICA: Apesar da rapidez de se ter uma aplicação assim, não é um padrão viável por não ser escalável nem mesmo de fácil manutenção.
 
-======================== **THIS IS A WORKING IN PROGRESS** ========================
+##### jsx
+* O HTML que escrevemos no dentro do nosso componente não é exatamente HTML. É uma sintaxe mais simples que nos permite escrever o código dentro do nosso componente.
+
+* JSX é uma sintaxe semelhante ao XML
+* Serve para escrevermos nossos components
+
+========================== **THIS IS A WORKING IN PROGRESS** ==========================
 ## Por que testar ?
 Vou resumir com alguns comentários que peguei na comunidade :+1:
 
