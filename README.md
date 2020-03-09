@@ -111,6 +111,94 @@ DICA: Apesar da rapidez de se ter uma aplicação assim, não é um padrão viá
 ```
 * Imagina ter que escrever nessa syntaxe :sweat_smile: ? Ainda bem que temos o [babel](https://babeljs.io/) pra ~~_compilar_~~ transformar a primeira versão na segunda versão (porque o navegador não entende jsx).
 
+## Trabalhando com aplicações Reactjs no dia-a-dia
+* Em geral, projetos utilizam CLI's ~~Command Line Interface~~ que fazem todo o _SETUP_ da aplicação, de modo que a estrutura criada ajude no desenvolvimento e crie o projeto final para colocarmos em _Produção_.
+
+##### `Create-react-app`
+* A [create-react-app](https://github.com/facebook/create-react-app) é bem simples de se utilizar, nós só precisamos ter o [npm](https://www.npmjs.com/) instalado em nossa máquina, rodar o seguinte comando: 
+```
+npx create-react-app cra-app
+```
+e será criado uma apliacação como o nome `cra-app` com algumas configurações dentro. A arvore de arquivos e pastas ficará parecido com isso: 
+```
+cra-app
+├── README.md
+├── node_modules
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── serviceWorker.js
+    └── setupTests.js
+```
+*
+  * Comandos disponíveis:
+  * `npm (ou yarn) start` - Inicia a aplicação;
+  * `npm run (ou yarn) test` - Roda os testes da aplicação;
+  * `npm (ou yarn) build` - Gera os arquivos para serem utilizados em Produção;
+
+##### `LeviosaJS`
+* A [LeviosaJS](https://github.com/bragamat/leviosajs) é uma CLI recente que tem a mesma utilidade da _lib_ anterior mas é mais rápida, mais leve e mais completa, tanto para desenvolvimento quanto pra produção. Para que possamos instalar e fazer uso de seus recursos, rodar o seguinte comando:
+```
+npm install --global leviosajs
+```
+* ou 
+
+```
+yarn global add leviosajs
+```
+
+* * Após isso teremos disponíveis os seguintes comandos: 
+  * `leviosa-new`
+  * `leviosa-start`
+  * `leviosa-build`
+  * `leviosa-test`
+  * `leviosa-accio`
+
+* Para gerarmos uma aplicação nova utilizando leviosajs podemos utilizar o primeiro comando: `leviosa-new lev-app` e iremos ter uma nova aplicação com o nome `lev-app` com a seguinte estrutura de pastas e arquivos dentro:
+
+```
+lev-app
+├── babel.config.js
+├── globalStyle.js
+├── index.js
+├── jest.config.js
+├── node_modules
+├── package-lock.json
+├── package.json
+├── public
+│   └── index.html
+├── readme.md
+├── src
+│   ├── App.js
+│   ├── __tests__
+│   │   └── App.test.js
+│   └── styles.js
+├── webpack.common.js
+├── webpack.dev.js
+└── webpack.prod.js
+```
+* Podemos iniciar a aplicação com `leviosa-start`
+
+## Métodos do reactjs para components
+* Temos disponíveis vários métodos muito importantes para trabalharmos nos nossos projetos:
+  * useState
+  * useEffect
+  * useContext
+* São o que chamamos de [hooks](https://pt-br.reactjs.org/docs/hooks-intro.html) :rocket:
+
 ====================== **Este é um conteúdo que está em constante atualização** ======================
 
 ========================== **Este é um conteúdo que NÃO está finalizado** ==========================
@@ -174,8 +262,10 @@ De modo geral, testes são escritos nessa forma:
 O _Jest_ nos permite digitar `jest` na linha de comando do terminal e rodar como testes todos os arquivos quem possuem `.spec` ou `.test` no nome. Então por exemplo:
 digamos que temos o seguinte arquivo: 
 `App.test.js`
-
-src/__tests__/
-├── App.test.js
+```
+src/
+├──/__tests__/
+├────── App.test.js
+```
 
 Quando usarmos o comando `jest`, o arquivo `App.test.js` será rodado. ![jestRun](./public/images/runningJestApp.png)
