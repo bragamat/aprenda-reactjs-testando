@@ -1,4 +1,4 @@
-# Vamos do início! :sunglasses:
+# Vamos do início! :boom:
 ======================  **Este é um conteúdo que está em constante atualização** ====================== 
 
 ========================== **Este é um conteúdo que NÃO está finalizado** ==========================
